@@ -425,6 +425,30 @@
             background: linear-gradient(135deg, rgba(232, 74, 138, 0.2), rgba(74, 25, 66, 0.5));
         }
 
+        /* Estilos para ajustar cualquier imagen dentro del contenedor de producto */
+        .product-image img {
+            max-width: 90%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        @media (max-width: 768px) {
+            .product-image {
+                height: 160px;
+                padding: 18px;
+            }
+            .product-image img {
+                max-width: 85%;
+                max-height: 100%;
+            }
+        }
+
         .perfume-placeholder {
             width: 100px;
             height: 150px;
@@ -1314,7 +1338,7 @@
             <div class="product-card">
                 <div class="product-image">
                     <span class="product-badge">Bestseller</span>
-                    <div class="perfume-placeholder placeholder-men">🥇</div>
+                    <img src="https://i.postimg.cc/gj0CbzdH/One-Million-Lucky.png" alt="One Million Lucky" class="perfume-img">
                 </div>
                 <div class="product-info">
                     <p class="product-brand">Paco Rabanne</p>
@@ -1351,7 +1375,7 @@
             <div class="product-card">
                 <div class="product-image">
                     <span class="product-badge">Premium</span>
-                    <div class="perfume-placeholder placeholder-men">👤</div>
+                    <img src="https://i.ibb.co/1GgXZM8m/Jean-paul-G.png" alt="Jean-paul-G" border="0" />
                 </div>
                 <div class="product-info">
                     <p class="product-brand">Jean Paul Gaultier</p>
@@ -2127,6 +2151,4 @@ Vi que el perfume *${name}* de *${brand}* está agotado 😔
         updateCart();
     </script>
 </body>
-
 </html>
-
